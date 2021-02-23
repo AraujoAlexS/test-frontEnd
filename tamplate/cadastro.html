@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC4 - Prova</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Font Awasome CDN -->
+    <script src="https://kit.fontawesome.com/98d4d87a5a.js" crossorigin="anonymous"></script>
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-primary justify-content-center bg-gray main ">
+            <div class="col-md-9 col-sd-12 align-self-center p-0 shadow-sm">
+                <div class="container-fluid no-gutters">
+                    <!--TABLE HEAD-->
+                    <div class="row flex table-head rounded-top align-content-center">
+                        <div class="col-md-12">
+                            <span class="ml-5">CADASTRAR NOVO USUÁRIO</span>
+                        </div>
+                    </div>
+                    <!--TABLE BODY-->
+                    <div class="row bg-white">
+                        <div class="col-8 mx-auto">
+                            <form id="cadastro-novo-usuario">
+                                <div class="form-row mt-5">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputNome" class="label-form">Foto</label>
+                                        <div class="form-row">
+                                            <img src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&fm=jpg&w=200&fit=max"
+                                                alt="profile picture" class="img-funcionario mr-3">
+                                            <button type="button" class="btn btn-outline-dark">Modificar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputNome" class="label-form">Nome</label>
+                                        <input type="text" class="form-control " id="inputNome"
+                                            placeholder="Digite seu nome" required>
+                                        <small class="validacao" id="validacao-nome"> </small>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail" class="label-form">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail"
+                                            placeholder="me@exemaple.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputSetor" class="label-form">Setor</label>
+                                        <select id="inputSetor" class="form-control" placeholder="Selecione o item">
+                                            <option selected>Opção 1</option>
+                                            <option>Opção 2</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCargo" class="label-form">Cargo</label>
+                                        <select id="inputCargo" class="form-control" placeholder="Selecione o item">
+                                            <option selected>Opção 1</option>
+                                            <option>Opção 2</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputFuncao" class="label-form">Função</label>
+                                        <select id="inputFuncao" class="form-control" placeholder="Selecione o item">
+                                            <option selected>Opção 1</option>
+                                            <option>Opção 2</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row row-on-off-switch my-3">
+                                    <label class="switch" class="label-form">
+                                        <input type="checkbox" id="switch-checkbox">
+                                        <span class="slider round"></span>
+                                        <span class="on"><i class="fas fa-check"></i></span>
+                                        <span class="off"><i class="fas fa-times"></i></span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--TABLE FOOTER-->
+                    <div class="row d-flex table-footer rounded-bottom align-content-center">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <button class="btn button" role="button" form="cadastro-novo-usuario">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--JQuery e Popper.js necessários para usar o Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!--Meu javaScript-->
+    <script src="./main.js"></script>
+</body>
+
+</html>

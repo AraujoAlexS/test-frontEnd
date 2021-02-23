@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+/* Debug usado para checar as divs na página final */
+[debug],
+[debug] *:not(g):not(path) {
+  color: hsla(210, 100%, 100%, 0.9) !important;
+  background: hsla(210, 100%, 50%, 0.5) !important;
+  outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+  box-shadow: none !important;
+  filter: none !important;
+}
+/* todas as variáveis de cor e font */
+:root {
+  --primary-color: rgba(249, 250, 251, 1);
+  --font-head: #6b7280;
+  --roboto: "Roboto";
+  --status-ativo-font: #065f46;
+  --status-ativo-bg: #d1fae5;
+  --status-inativo-font: #991b1b;
+  --status-inativo-bg: #ffe2e3;
+  --btn-default: #4f46e5;
+  --btn-hover: #2e26bd;
+  --btn-active: #2e26bd;
+  --switch-active: #71b969;
+  --switch-inactive: #e42c17;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto";
+}
+
+/* -------- INDEX -------- */
+.bg-gray {
+  background-color: var(--font-head) !important;
+}
+
+.main {
+  height: 100vh;
+}
+
+.content {
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  min-width: 814px;
+}
+
+.table-head,
+.table-footer {
+  border-style: none !important;
+  background-color: var(--primary-color) !important;
+  color: var(--font-head);
+  height: 53px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.cell {
+  height: 70px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+.img-funcionario {
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.titulo {
+  font-family: var(--roboto);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.sub-titulo {
+  color: var(--font-head);
+  font-family: var(--roboto);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.status-ativo {
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: var(--status-ativo-bg);
+  color: var(--status-ativo-font);
+  font-weight: bolder;
+}
+.status-inativo {
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: var(--status-inativo-bg);
+  color: var(--status-inativo-font);
+  font-weight: bolder;
+}
+
+/* Botões */
+.button {
+  margin-right: 25px;
+  font-size: 14px;
+  background-color: var(--btn-default);
+  color: white;
+  font-weight: bolder;
+}
+
+.button:hover {
+  background-color: var(--btn-hover);
+  color: white;
+  font-weight: bolder;
+}
+
+.button:focus {
+  background-color: var(--btn-active);
+  color: white;
+  font-weight: bolder;
+}
+
+
+/* ----------- CADASTRO ----------- */
+
+.label-form{
+  font-weight: bolder;
+}
+
+.validacao{
+  color: var(--status-inativo-font);
+}
+
+.input-invalido{
+  border-color: var(--switch-inactive);
+  color: var(--status-inativo-font);
+}
+
+/* ----------- On Off switch ----------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-inactive);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--switch-active);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+.on,
+.off {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.on {
+  transform: translate(-130%, -50%);
+}
+
+.off {
+  transform: translate(40%, -50%);
+}
+
+input:checked + .slider .on {
+  display: block;
+}
+
+input:checked + .slider .off {
+  display: none;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
